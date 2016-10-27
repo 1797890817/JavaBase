@@ -29,6 +29,8 @@ public class RefDemo {
 		return  other;
 	}
 
+	
+	
 	public static void main(String kl[]){
 		PrintStream out = System.out;
 		out.println("****************************");
@@ -48,7 +50,7 @@ public class RefDemo {
 		out.println("-----------------------------------------------");
 		
 		refDemo1 = refDemo1.getRefDemo(refDemo1);
-		
+		out.println(refDemo1);
 		out.println(refDemo1);
 		
 		
