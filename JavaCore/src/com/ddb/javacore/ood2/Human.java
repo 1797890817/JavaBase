@@ -32,7 +32,14 @@ public class Human {
 
 	@Override
 	public String toString() {
-		return "Human [id=" + id + ", name=" + name + ", age=" + age + ", work=" + work + "]";
+		return "Human [id=" + id + ", name=" + name + "]";
+	}
+
+
+	public Human(String id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
 	}
 
 	
