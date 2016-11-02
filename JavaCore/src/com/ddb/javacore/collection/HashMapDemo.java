@@ -26,6 +26,12 @@ public class HashMapDemo {
 			out.println("entry : " + entry);
 			out.println(entry.getKey() + " = " + entry.getValue());
 		}
+		out.println("-------------------------------------------------");
+		for (Entry<Long, Integer> entry : hMap.entrySet()) {
+			out.println("entry : " + entry);
+			out.println(entry.getKey() + " = " + entry.getValue());
+		}
+		
 		
 		out.println("hMap.get(14) : " +hMap.get(14L));
 		
