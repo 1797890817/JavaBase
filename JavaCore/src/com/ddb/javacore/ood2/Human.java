@@ -3,7 +3,7 @@ package com.ddb.javacore.ood2;
 import lombok.Getter;
 import lombok.Setter;
 @Getter@Setter
-public class Human {
+public class Human implements Comparable<Human> {
 	private String id;
 	
 	private String name;
@@ -30,9 +30,12 @@ public class Human {
 
 
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
-		return "Human [id=" + id + ", name=" + name + "]";
+		return "Human [id=" + id + ", age=" + age + "]";
 	}
 
 
@@ -42,5 +45,24 @@ public class Human {
 		this.name = name;
 	}
 
+
+	@Override
+	public int compareTo(Human o) {
+		
+		if (this.getAge().intValue() == o.getAge().intValue()) {
+			return 0;
+		} else if (this.getAge().intValue() > o.getAge().intValue()) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}
+
+
+	public Human(String id, Integer age) {
+		super();
+		this.id = id;
+		this.age = age;
+	}
 	
 }
