@@ -19,7 +19,6 @@ public class HashMapDemo {
 		hMap.put(15L, 115);
 		hMap.put(11L, 119);
 		out.println("hMap : " + hMap);
-		
 		Set<Map.Entry<Long,Integer>> hSetEntrys = hMap.entrySet();
 		out.println("Map -----> Key : Value");
 		for (Entry<Long, Integer> entry : hSetEntrys) {
