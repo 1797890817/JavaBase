@@ -44,7 +44,6 @@ public class ReaderWriterDemo {
 		writer.flush();	//刷新缓存区
 		//out.println("向文件写入：" + enString);
 		out.println("向文件写入：" + chString);
-		
 	}
 
 }
