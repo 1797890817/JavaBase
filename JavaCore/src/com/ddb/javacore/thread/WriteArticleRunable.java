@@ -4,7 +4,7 @@ public class WriteArticleRunable implements Runnable {
 	private Paper paper;
 	private Pen pen;
 	private boolean isRunning = true;
-	private int count = 20;//循环次数
+	private int count = 20;// 循环次数
 
 	public WriteArticleRunable(Paper paper, Pen pen) {
 		super();
@@ -15,27 +15,16 @@ public class WriteArticleRunable implements Runnable {
 	@Override
 	public void run() {
 		while (isRunning) {
-			//synchronized (paper) {
 			if (!paper.getIsPrivated()) {
 				paper.setIsPrivated(true);
 				paper.setOwner(Thread.currentThread().getName());
 			}
-			//}
-			//synchronized (paper) {
-			/*try {
-					if (Thread.currentThread().getName().equals("zhangsan")) {
-						Thread.sleep(1);
-					}
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}*/
 			// 判断Pen资源是否可以得到
 			if (!pen.getIsPrivated()) {
 				pen.setIsPrivated(true);
 				pen.setOwner(Thread.currentThread().getName());
 			}
-			//}
+			
 			Boolean getPaper = paper.getOwner().equals(Thread.currentThread().getName());
 			Boolean getPen = pen.getOwner().equals(Thread.currentThread().getName());
 			synchronized (getPen) {
@@ -52,7 +41,7 @@ public class WriteArticleRunable implements Runnable {
 					System.out.println(Thread.currentThread().getName() + "得到了纸，我缺少笔！");
 					System.out.println(Thread.currentThread().getName() + "我要等待钢笔资源！");
 					--count;
-					if (count <=0) {
+					if (count <= 0) {
 						System.out.println(Thread.currentThread().getName() + " :我检测到形成死锁 ，算了 我先礼让 一下 ");
 						paper.setIsPrivated(false);
 						try {
@@ -62,8 +51,8 @@ public class WriteArticleRunable implements Runnable {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-					} 
-
+					}
+					
 				} else if (!getPaper && getPen) {
 					System.out.println(Thread.currentThread().getName() + "得到了钢笔，我缺少纸张！");
 					System.out.println(Thread.currentThread().getName() + "我要等待纸张资源！");
@@ -78,8 +67,7 @@ public class WriteArticleRunable implements Runnable {
 	}
 
 	public void stop() {
-		this.isRunning= false;
+		this.isRunning = false;
 	}
-	
-	
+
 }
