@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>申请表</title>
+</head>
+<body style="background-color: pink">
+	<p>申请表</p>
+	<form action="apply" method="post">
+		<table>
+			<tr>
+				<td>姓名:</td>
+				<td><input name='username' type="text"><span>&nbsp;&nbsp;&nbsp;&nbsp;(最大32个字符)</span></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input name="passwd" type="password"></td>
+			</tr>
+
+			<tr>
+				<td>照片:</td>
+				<td><input name="tupian" type="file" value="000000"></td>
+			</tr>
+			<tr>
+				<td colspan="2">感兴趣的职位：</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input name="radio2" type="radio"
+					checked="checked"><span>Web设计</span> <input name="radio2"
+					type="radio"><span>Web开发</span></td>
+			</tr>
+			<tr>
+				<td colspan="2">向往的城市：<select>
+						<option value="0">请选择</option>
+						<option value="1" selected="selected">帝都</option>
+						<option value="2">上海</option>
+						<option value="3">深圳</option>
+						<option value="4">杭州</option>
+						<option value="5">其他</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">协议：</td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea readonly="readonly">
+					求职信息必须真实！
+				</textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input name="checkbox" type="checkbox"
+					checked="checked"><span>我接受！</span></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">经验 ：<select>
+						<option value="1" selected="selected">无经验</option>
+						<option value="2">一年以上</option>
+						<option value="3">三年以上</option>
+						<option value="4">五年以上</option>
+						<option value="5">十年以上</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input name="submit" type="submit" value="提交"
+					disabled="disabled">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+					name="submit" type="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
