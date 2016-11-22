@@ -2,3 +2,70 @@
 h1 {
 	color: blue;
 }
+
+.myClass {
+	color: red;
+	font-family:宋体;
+	font-style: italic;
+}
+
+.myClass2 {
+	color: pink;
+	text-decoration: underline;
+}
+
+#id001 {
+	color:yellow;
+	font-family: 微软雅黑;
+	font-weight: bold;
+	
+}
+
+
+ol li {
+	color: orange;
+	font-family:宋体;
+	font-style: italic;
+}
+
+ul li {
+	color: red;
+	font-family:隶书;
+	font-style: italic;
+}
+
+
+p.pt{
+	color: red;
+	font-family:宋体;
+	font-style: italic;
+}
+
+div#navfirst
+		{
+		height: 55px;
+		width: 1100px;
+		margin: 0 0 0 12px;
+		padding: 0;
+		border: 0;
+		background: #fff;
+		}
+
+div#navfirst ul#menu
+		{
+		height: 55px;
+		width: 1100px;
+		background: transparent url(/ui/bg.gif) top left no-repeat;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		}
+
+div#navfirst ul#menu li
+		{
+		margin:0;
+		padding:0;
+		list-style:none;
+		position:absolute;
+		top:0;
+		}
