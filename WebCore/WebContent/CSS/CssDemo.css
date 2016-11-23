@@ -39,32 +39,78 @@ p.pt{
 	font-family:宋体;
 	font-style: italic;
 }
+.font-family {
+	font-family: 微软雅黑;
+}
+.font-style{
+	font-style: italic;
+}
+.font-style2{
+	font-style: oblique;
+}
 
-div#navfirst
-		{
-		height: 55px;
-		width: 1100px;
-		margin: 0 0 0 12px;
-		padding: 0;
-		border: 0;
-		background: #fff;
-		}
+.font-variant{
+	font-variant: small-caps;
+}
 
-div#navfirst ul#menu
-		{
-		height: 55px;
-		width: 1100px;
-		background: transparent url(/ui/bg.gif) top left no-repeat;
-		margin: 0;
-		padding: 0;
-		position: relative;
-		}
+.font-size{
+	font-size: x-small;
+}
 
-div#navfirst ul#menu li
-		{
-		margin:0;
-		padding:0;
-		list-style:none;
-		position:absolute;
-		top:0;
-		}
+.text-transform{
+	text-transform: uppercase;
+}
+.text-transform2{
+	text-transform: lowercase;
+}
+.text-transform3{
+	text-transform: capitalize;
+}
+
+.text-decoration{
+	text-decoration:underline;
+}
+.text-decoration2{
+	text-decoration:overline;
+}
+.text-decoration3{
+	text-decoration:line-through;
+}
+.text-decoration4{
+	text-decoration:blink;
+}
+
+.word-spacing{
+	word-spacing:20px;
+}
+
+.letter-spacing{
+	letter-spacing:30px;
+}
+
+.line-height{
+	line-height: 50px;
+}
+
+.text-align{
+	text-align: center;
+}
+.text-align2{
+	text-align: left;
+}
+.text-align3{
+	text-align: right;
+}
+.text-align4{
+	text-align: justify;
+}
+
+.text-indent{
+	text-indent: 25%;
+}
+
+.background-image{
+	background-image:url("../Images/dm.jpg");
+	background-repeat: no-repeat;
+}
+
