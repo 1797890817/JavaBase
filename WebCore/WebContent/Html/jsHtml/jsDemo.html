@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script language="javascript">
+	// 定义一个方法
+	function Age() {
+		document.write("Hello World!");
+	} 
+	
+	function DialogBox() {
+		//alert("这是警告框！");
+		//confirm("这是comfirm确认框！");
+		prompt("你的年龄是？","25");
+	}
+	function closeWin() {
+		window.close();
+	}
+</script>
+</head>
+<body>
+	<input name="button" type="button" value="点击" onclick="DialogBox()"  />
+	<br/>
+	<a href="javascript:self.close()">关闭当前窗口</a><br/>
+	<input name="button" type="button" value="关闭" onclick="closeWin()"  />
+</body>
+</html>
