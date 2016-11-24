@@ -86,7 +86,7 @@ function replaceChildDemo() {
 	newItem.appendChild(textnode)
 	
 	var list = document.getElementById("List");
-	list.replaceChild(newItem, list.childNodes[1]);
+	list.replaceChild(newItem, list.childNodes[0]);
 	return false;
 }
 
