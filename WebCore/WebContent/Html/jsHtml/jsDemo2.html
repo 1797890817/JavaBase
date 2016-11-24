@@ -64,10 +64,9 @@
 		myObject.age = "22";
 		myObject.phone = "555 1234";
 
-		//
 		//myObject.100 = 100;
-		/* myObject["not a valid identifier"]= "This is the property value"; 
-		myObject[100] ="100"; */
+		myObject["not a valid identifier"]= "This is the property value"; 
+		myObject[100] ="100";
 
 		// 枚举（循环）对象的所有属性
 		for (prop in myObject) {
@@ -86,11 +85,16 @@
 		myArray[0] = "Hello";
 		myArray[1] = 42;
 		myArray[2] = new Date(2000, 1, 1);
-		window.alert(myArray.length);// 显示数组的长度 3
+		//window.alert(myArray.length);// 显示数组的长度 3
 		myArray.expando = "JScript!";// 添加某些 expando 属性
 		myArray["another Expando"] = "Windows";
 		// 仍然显示 3，因为两个 expando 属性，并不影响长度。
-		window.alert(myArray.length);
+		//window.alert(myArray.length);
+		//window.alert("myArray.expando:" + myArray.expando);
+		//window.alert("myArray[expando]:" + myArray["expando"]);
+		for ( var prop in myArray) {
+			document.write("prop " + prop + " is " + myArray[prop] + "<br/>" )
+		}
 
 	}
 
@@ -116,5 +120,12 @@
 	<input type="button" value="objDemo" onclick="objDemo()" />
 	<input type="button" value="arrayDemo" onclick="arrayDemo()" />
 	<input type="button" value="stringDemo" onclick="stringDemo()" />
+	
+	
+	<br/>
+	<a href="history.go(-2)">后退两页</a>
+	<a href="history.back()">后退一页</a>
+	<a href="history.forward()">前进一页</a>
+	<a href="history.go(2)">前进两页</a>
 </body>
 </html>
