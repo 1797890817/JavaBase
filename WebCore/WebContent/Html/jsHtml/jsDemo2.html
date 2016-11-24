@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//定义一个构造函数
+	function pasta(grain, width, shape, hasEgg) {
+		this.grain = grain; // 是用什么粮食做的？   
+		this.width = width; // 多宽？（数值）      
+		this.shape = shape; // 横截面形状？（字符串）
+		this.hasEgg = hasEgg; // 是否加蛋黄？（boolean）
+		this.toString = pastaToString;
+		// 这里添加 toString 方法（如下定义）。
+		// 注意在函数的名称后没有加圆括号；
+		// 这不是一个函数调用，而是对函数自身的引用。
+	}
+
+	function pastaToString() {
+		// 返回对象的属性。
+		return "Grain: " + this.grain + "\n" + "Width: " + this.width + "\n"
+				+ "Shape: " + this.shape + "\n" + "Egg?: "
+				+ Boolean(this.hasEgg);
+	}
+
+	function Student(name) {
+		this.name = name;
+		this.getName = getName;
+	}
+	function getName() {
+		return this.name;
+	}
+	function Button1_onclick() {
+		var s = new Student("lijie", 20, "asdad", "13971212");
+		alert(s.getName());
+		alert(s.name);
+	}
+
+	function pastaDemo() {
+		//定义了对象构造器后，用 new 运算符创建对象实例。
+		var spaghetti = new pasta("wheat", 0.2, "circle", true);
+
+		// 将调用 toString() 并显示 spaghetti 对象 的属性。
+		window.alert(spaghetti);
+		pasta.prototype.foodgroup = "carbohydrates";
+
+		spaghetti.color = "   pale straw   ";
+		spaghetti.drycook = 7;
+		spaghetti.freshcook = 0.5;
+		window.alert("spaghetti.foodgroup=" + spaghetti.foodgroup)
+		var chowFun = new pasta("rice", 3, "flat", false);
+		window.alert(chowFun);
+		pasta.prototype.trim = function() {
+			// 用正则表达式将前后空格用空字符串替代。
+			return this.replace(/(^\s*)|(\s*$)/g, "");
+		}
+		var trim = spaghetti.trim(spaghetti.color)
+		window.alert(trim);
+	}
+
+	function objDemo() {
+		var myObject = new Object();
+		myObject.name = "James";
+		myObject.age = "22";
+		myObject.phone = "555 1234";
+
+		//
+		//myObject.100 = 100;
+		/* myObject["not a valid identifier"]= "This is the property value"; 
+		myObject[100] ="100"; */
+
+		// 枚举（循环）对象的所有属性
+		for (prop in myObject) {
+			// 显示 "The property 'name' is James"，等等。
+			//window.alert("The property '" + prop + "' is " + myObject[prop]);
+			document.write("The property '" + prop + "' is " + myObject[prop]
+					+ "<br/>");
+			//document.write("The property '" + prop + "' is " + myObject[prop]
+			//		+ "\r\n");
+			//document.writeln("The property '" + prop + "' is " + myObject[prop]);
+		}
+
+	}
+	function arrayDemo() {
+		var myArray = new Array(3);
+		myArray[0] = "Hello";
+		myArray[1] = 42;
+		myArray[2] = new Date(2000, 1, 1);
+		window.alert(myArray.length);// 显示数组的长度 3
+		myArray.expando = "JScript!";// 添加某些 expando 属性
+		myArray["another Expando"] = "Windows";
+		// 仍然显示 3，因为两个 expando 属性，并不影响长度。
+		window.alert(myArray.length);
+
+	}
+
+	function stringDemo() {
+		String.prototype.trim = function() {
+			// 用正则表达式将前后空格用空字符串替代。
+			console.info("这是prototype.trim！")
+			return this.replace(/(^\s*)|(\s*$)/g, "");
+		}
+		var s = "    leading and trailing spaces    ";
+		// 显示 "    leading and trailing spaces     (35)"
+		window.alert(s + " (" + s.length + ")");
+		// 删除前后空格
+		s = s.trim();
+		// 显示"leading and trailing spaces (27)"
+		window.alert(s + " (" + s.length + ")");
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="stDemo" onclick="Button1_onclick()" />
+	<input type="button" value="pastaDemo" onclick="pastaDemo()" />
+	<input type="button" value="objDemo" onclick="objDemo()" />
+	<input type="button" value="arrayDemo" onclick="arrayDemo()" />
+	<input type="button" value="stringDemo" onclick="stringDemo()" />
+</body>
+</html>
