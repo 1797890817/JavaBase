@@ -5,24 +5,74 @@
 <title>Insert title here</title>
 <script language="javascript">
 	// 定义一个方法
+	var print = console.info("console!")
 	function Age() {
 		document.write("Hello World!");
-	} 
-	
+	}
+
 	function DialogBox() {
-		//alert("这是警告框！");
-		//confirm("这是comfirm确认框！");
-		prompt("你的年龄是？","25");
+		var num = 5555;
+		//console.info(num);
+		alert("这是警告框！");
+		confirm("这是comfirm确认框！");
+		prompt("你的年龄是？", "25");
 	}
 	function closeWin() {
 		window.close();
 	}
+
+	function objDemo() {
+		var myObject = new Object();
+		myObject.name = "James";
+		myObject.age = "22";
+		myObject.phone = "555 1234";
+		// 枚举（循环）对象的所有属性
+		for (prop in myObject) {
+			// 显示 "The property 'name' is James"，等等。
+			//window.alert("The property '" + prop + "' is " + myObject[prop]);
+			//document.write("The property '" + prop + "' is " + myObject[prop] + "<br/>");
+			document.write("The property '" + prop + "' is " + myObject[prop]
+					+ "\r\n");
+			//document.writeln("The property '" + prop + "' is " + myObject[prop]);
+		}
+
+	}
+
+	function function_Name(exp1, exp2, exp3, exp4) {
+		var num = function_Name.arguments.length;
+		document.write(exp1 + "<br/>");
+		if (num > 1)
+			document.write(exp2 + "<br/>");
+		if (num > 2)
+			document.write(exp3 + "<br/>");
+		if (num > 3)
+			document.write(exp4);
+	}
+
+	function tryCatch() {
+		try {
+			var m = "age";
+			var n = 20;
+			document.write(parseInt(m) + n);
+			//抛出语句
+			throw new Error("not a valid number");
+		} catch (errMsg) {
+			alert(errMsg.message);
+		}
+	}
 </script>
 </head>
 <body>
-	<input name="button" type="button" value="点击" onclick="DialogBox()"  />
-	<br/>
-	<a href="javascript:self.close()">关闭当前窗口</a><br/>
-	<input name="button" type="button" value="关闭" onclick="closeWin()"  />
+	<input name="button" type="button" value="点击" onclick="DialogBox()" />
+	<br />
+	<a href="javascript:self.close()">关闭当前窗口</a>
+	<br />
+	<input name="button" type="button" value="关闭" onclick="closeWin()" />
+	<input name="button" type="button" value="关闭2" ondblclick="closeWin()" />
+	<input name="button" type="button" value="objDemo" onclick="objDemo()" />
+	<input name="button" type="button" value="function_Name"
+		ondblclick="function_Name(1,'m',6,'jjhj')" />
+	<input name="button" type="button" value="tryCatch"
+		onclick="tryCatch()" />
 </body>
 </html>
