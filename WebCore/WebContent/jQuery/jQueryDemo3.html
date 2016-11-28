@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>jQueryDemo</title>
-<script type="text/javascript" src="jquery.min.js"></script>
+<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<style type="text/css">
+.myClass {
+	color: red;
+	font-family: 华文行楷;
+	font-size: 65px;
+}
+
+.myClass2 {
+	text-align: center;
+}
+.my
+</style>
 </head>
 <body>
 	<input id="ipt" type="text" class="cls_ipt" />
@@ -28,7 +42,43 @@
 		<option value="4">香蕉</option>
 	</select>
 	<script type="text/javascript">
-	console.log($('#sel :selected'));
+		//console.log($('#sel :selected'));
+	</script>
+
+	<hr />
+	<form id="my_form1" action="foo.php"></form>
+	<script type="text/javascript">
+		/* 		var tmp = $('#my_form1').attr('action');
+		 console.log(tmp);
+		 $('#my_form1').attr('action', 'bar.php');
+		 console.log($('#my_form1').attr('action')); */
+		$('#my_form1').removeAttr('action');
+		var tmp = $('#my_form1').attr('action');
+		console.log(tmp);
+	</script>
+	<hr />
+	<p class="myClass myClass2">
+		<!-- <b>Hello</b> -->
+		Hello
+	</p>
+
+	<script type="text/javascript">
+		/* 		console.log($('p').text());
+		 $('p').html('<i>World</i>');
+		 console.log($('p').text()); */
+
+		//$('p').css('color','red').css('font-family',"微软雅黑");
+		//$('p').addClass("myClass myClass2");	//同时添加多个样式
+		//$('p').removeClass("myClass2");	//删除指定样式
+		$('p').removeClass(); //删除所有样式
+	</script>
+	<script type="text/javascript">
+		//$('p').append(' World');
+		//$('p').prepend(' World');
+	</script>
+	<script type="text/javascript">
+		//$('p').after('<p>World</p>');
+		$('p').before('<p>World</p>');
 	</script>
 
 
