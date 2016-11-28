@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<input id="ipt" type="text" class="cls_ipt" />
+	<script type="text/javascript">
+		$('input[id=ipt]').val('hello');
+	</script>
+	<hr />
+	<form id="my_form">
+		<input type="text" /> <input type="radio" /> <input type="radio"
+			checked="checked" /> <input type="checkbox" /> <input
+			type="checkbox" checked="checked" />
+	</form>
+	<script type="text/javascript">
+		//console.log($('#my_form :input:checked'));
+	</script>
+
+	<select id="sel" multiple="multiple">
+		<option value="0">苹果</option>
+		<option value="1" selected="selected">桔子</option>
+		<option value="2">荔枝</option>
+		<option value="3" selected="selected">葡萄</option>
+		<option value="4">香蕉</option>
+	</select>
+	<script type="text/javascript">
+	console.log($('#sel :selected'));
+	</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+	/* 	function get_text() {
+	 var domObj = document.getElementById('txt');
+	 alert(document.getElementById('txt').value);
+	 } */
+	function get_text() {
+		var jq = $('#txt');
+		var domObj = document.getElementById('txt');
+		alert($('#txt').val());
+	}
+</script>
+
+</head>
+<body>
+	<input type="text" id="txt" />
+	<button type="button" onclick="get_text();">Go</button>
+	<hr />
+	<div>我是Div！</div>
+	<script type="text/javascript">
+		$('div').css('border', '1px solid red');
+		//alert($('div').css('border'));
+	</script>
+
+	<div id="from">div的内容</div>
+	<div id="to"></div>
+	<script type="text/javascript">
+		var from = $("#from").html();
+		var to = $("#to").html();
+
+		$("#to").html($("#from").html());
+	</script>
+
+	<ul>
+		<li class="fruit">Apple</li>
+		<li id="tomato">Tomato</li>
+		<li class="fruit">Banana</li>
+		<li>Potato</li>
+		<li class="fruit">Orange</li>
+	</ul>
+
+	<script type="text/javascript">
+		//$(".fruit").css('color', 'red');
+		$('.fruit,#tomato').css('color', 'pink');
+		//console.log($('*'));
+	</script>
+	<hr />
+	<div>
+		祖先元素
+		<p>
+			<label>孙元素</label> <span><label>后代元素</label></span>
+		</p>
+		<br /> <label>子元素</label> <label>子元素2</label> <label>子元素3</label> <label>子元素4</label>
+		<label>子元素5</label> <label>子元素6</label>
+	</div>
+	<script type="text/javascript">
+		//$('div label').css('color', 'red');	//祖先后代选择器
+		//$('div > label').css('color', 'red');	//
+		//$('p > label').css('color', 'red');	//父子选择器
+		//$('p + label').css('color', 'red');		//隔壁选择器
+		$('p ~ label').css('color', 'red'); //邻居选择器
+	</script>
+
+	<hr />
+	<ul id="ul">
+		<li>Apple</li>
+		<li>Tomato</li>
+		<li>Banana</li>
+		<li>Potato</li>
+		<li>Orange</li>
+		<li><p>
+				<span>Apple</span>
+			</p></li>
+	</ul>
+
+	<script type="text/javascript">
+		/*     $('#ul li:first').css('color', 'red');
+		 $('li:last').css('color', 'blue'); */
+		/*     $('li:first-child').css('color', 'red');
+		 $('li:last-child').css('color', 'blue'); */
+		//$('li:eq(2)').css('color','yellow');
+		//$("li:contains('ta')").css('color','yellow');
+		$("li:has('span')").css('color', 'yellow');
+	</script>
+	<hr />
+	<p style="display: none;">我是隐藏的</p>
+	<p style="display: none;">我是隐藏的2</p>
+	<p style="display: none;">我是隐藏的3</p>
+	<script type="text/javascript">
+		$('p:hidden').show();
+		$('p:visible').hide();
+	</script>
+
+
+
+
+
+</body>
+</html>

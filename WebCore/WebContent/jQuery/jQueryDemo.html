@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+/* 	function get_text() {
+		var domObj = document.getElementById('txt');
+		alert(document.getElementById('txt').value);
+	} */  
+ 	function get_text() {
+		var jq = $('#txt');
+		var domObj = document.getElementById('txt');
+		alert($('#txt').val());
+	} 
+	
+	
+</script>
+
+</head>
+<body>
+<input type="text" id="txt" />
+<button type="button" onclick="get_text();">Go</button>
+
+</body>
+</html>

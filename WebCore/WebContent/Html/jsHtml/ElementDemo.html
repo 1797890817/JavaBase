@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	function demo() {
+		var tmp = document.getElementsByTagName("p");
+		var tmp2 = document.getElementsByTagName("input");
+		var tmp3 = document.getElementsByTagName("a");
+		
+		document.write("455545445");
+	}
+	
+	</script>
+
+</head>
+<body onload="demo()">
+	<p><b>baidu</b></p>
+	<p>163.com</p>
+	
+		<input type="button" value="withDemo" onclick="withDemo()" />
+	<input type="button" value="pluginsDemo" onclick="pluginsDemo()" />
+	<input type="button" value="screenDemo" onclick="screenDemo()" />
+	<input type="button" value="关闭" onclick="cfm()" />
+
+	<input type="button" value="连接到163"
+		onClick="location.href='http://www.163.com'">
+	<input type="button" value="刷新页面" onclick="location.reload()" />
+	<input type="button" value="替换页面"
+		onclick="location.replace('jsDemo2.html')" />
+	<a href="jsDemo2.html">jsDemo2.html</a>
+	
+	<input type="button" value="清除文档内容" onclick="clearDemo()" />
+
+		<br/>
+	<a href="history.go(-2)">后退两页</a>
+	<a href="history.back()">后退一页</a>
+	<a href="history.forward()">前进一页</a>
+	<a href="history.go(2)">前进两页</a>
+</body>
+</html>

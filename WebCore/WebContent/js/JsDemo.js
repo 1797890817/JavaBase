@@ -69,6 +69,15 @@ function delNode() {
 	}
 	// return false;
 }
+function addContentForTexArea() {
+	var allGrafs = document.getElementsByTagName("p");
+	if (allGrafs.length > 1) {
+		var fisrtGraf = allGrafs.item(0)
+		var txtArea = fisrtGraf.childNodes[1];
+		txtArea.value= "268";
+	}
+	// return false;
+}
 
 function insertBeforeDemo() {
 	var newItem = document.createElement("LI");
