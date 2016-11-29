@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+<script type="text/javascript">
+	function cloneDemo() {
+		var cloned_p = $('#idp').clone().removeAttr('id');
+		$('#idp').after(cloned_p);
+	}
+
+	function removeDemo() {
+		//$('li').remove();
+		//$('.fruit').remove();
+		//$('li').remove('.fruit');
+		$('li :even').remove();
+	}
+
+	function emptyDemo() {
+		$('body').empty();
+	}
+</script>
+</head>
+<body>
+	<!-- 	<input type="button" value="clone" onclick="cloneDemo()">
+	<p id="idp">
+		<input type="text" /><input type="button" value="Go" />
+	</p> -->
+
+	<p>Hello</p>
+	<script type="text/javascript">
+		//$('p').replaceWith('<b>World</b>');
+
+		//$('p').wrap("<div style='color:red;' ></div>");
+		$('p').wrapInner("<div style='color:blue;' ></div>");
+	</script>
+	<hr />
+	<input type="button" value="remove" onclick="removeDemo()">
+	<input id="button1" type="button" value="empty">
+	<ul>
+		<li class="fruit">Apple</li>
+		<li>Tomato</li>
+		<li class="fruit">Banana</li>
+		<li>Potato</li>
+	</ul>
+	<script type="text/javascript">
+		//$('#button1').bind('click',emptyDemo());
+		$('#button1').bind('click', function() {
+			$('body').empty();
+		});
+	</script>
+
+	<input id="btn" type="button" value="点我" />
+	<input id="btn2" type="button" value="激活" />
+	<script type="text/javascript">
+		$(function() {
+			$('#btn').bind('click', function() {
+				$(this).attr("disabled", "true");
+			})
+			$('#btn2').bind('click', function() {
+				//$('#btn').attr("disabled", "false");
+				$('#btn').removeAttr("disabled");
+			})
+			
+/* 			$('#btn').hover(function() {
+				$(this).val("进入");
+			},function(){
+				$(this).val("离开");
+			})
+			 */
+			function overDemo () {
+				$(this).val("进入");
+			}
+			function outDemo () {
+				$(this).val("离开");
+			}
+			
+			$('#btn').hover(overDemo,outDemo)
+		});
+	</script>
+
+
+
+
+
+</body>
+</html>
