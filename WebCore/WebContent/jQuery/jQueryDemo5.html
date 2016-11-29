@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+<script type="text/javascript">
+	function hideDemo() {
+		//$('p').hide();
+		$('p').hide('slow',function(){
+			alert("隐藏成功！")
+		});
+	}
+	function showDemo() {
+		//$('p').show();
+		$('p').show('slow',function(){
+			alert("显示成功！")
+		});
+	}
+	function slideUpDemo() {
+		//$('p').hide();
+		$('p').slideUp(5000,function(){
+			alert("隐藏成功！")
+		});
+	}
+	function slideDownDemo() {
+		//$('p').show();
+		$('p').slideDown(5000,function(){
+			alert("显示成功！")
+		});
+	}
+	function toggleDemo(){
+/* 		$('p').toggle('slow',function(){
+			alert("显示成功！")
+		}); */
+		$('p').toggle('slow');
+		
+	}
+	function slideToggleDemo(){
+/* 		$('p').toggle('slow',function(){
+			alert("显示成功！")
+		}); */
+		$('p').slideToggle(5000);
+		
+	}
+	
+	function fadeToDemo(){
+		$('p').fadeTo(2000,0.1);
+	}
+	function fadeInDemo(){
+		$('p').fadeIn(2000);
+	}
+	function fadeOutDemo(){
+		$('p').fadeOut(2000);
+	}
+
+</script>
+</head>
+<body>
+	<p><b>Hello</b></p>
+
+	<hr />
+	<input type="button" value="hide" onclick="hideDemo()">
+	<input type="button" value="show" onclick="showDemo()">
+	<input type="button" value="slideUp" onclick="slideUpDemo()">
+	<input type="button" value="slideDown" onclick="slideDownDemo()">
+	<input type="button" value="toggle" onclick="toggleDemo()">
+	<input type="button" value="slideToggle" onclick="slideToggleDemo()">
+	<input type="button" value="fadeTo" onclick="fadeToDemo()">
+	<input type="button" value="fadeIn" onclick="fadeInDemo()">
+	<input type="button" value="fadeOut" onclick="fadeOutDemo()">
+	<input id="button1" type="button" value="empty">
+
+
+</body>
+</html>

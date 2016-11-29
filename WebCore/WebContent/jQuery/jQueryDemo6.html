@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+	<div style="width: 24px; height: 32px; border: 1px solid red;"></div>
+	<button type="button">变大</button>
+
+	<script type="text/javascript">
+		$('button').bind('click', function() {
+			$('div').animate({
+				width : '240px',
+				height : '320px'
+			}, 3000);
+		});
+	</script>
+
+	<div
+		style="position: relative; width: 24px; height: 32px; border: 1px solid red;"></div>
+	<button type="button">向右</button>
+
+	<script type="text/javascript">
+		$('button').bind('click', function() {
+			$('div').animate({
+				left : '+=100px'
+			}, 3000);
+		});
+	</script>
+
+
+</body>
+</html>
