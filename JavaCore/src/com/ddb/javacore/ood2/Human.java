@@ -16,7 +16,8 @@ public class Human implements Serializable, Comparable<Human> {
 	private String id;
 	private String name;
 
-	private Integer age;
+	private Integer age;	
+	//private transient Integer age;	//不进行序列化！
 	private String work;
 
 	public Human() {
@@ -41,7 +42,7 @@ public class Human implements Serializable, Comparable<Human> {
 	 */
 	@Override
 	public String toString() {
-		return "Human [name=" + name + ", age=" + age + "]";
+		return "Human [id=" + id + ", age=" + age + "]";
 	}
 
 	public Human(String id, String name) {
